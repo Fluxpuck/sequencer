@@ -17,7 +17,7 @@ var stepSequencer_3 = new StepSequencer(tempo, division, sequence_3);
 // the step when that step is to be played
 stepSequencer_0.on('0', function (step) {
 
-    player.play('./kick.wav', (err) => {
+    player.play('sounds/kick.wav', (err) => {
         if (err) console.log(`Could not play sound: ${err}`);
     });
 
@@ -35,7 +35,7 @@ stepSequencer_0.on('0', function (step) {
     })
     .on('4', function (step) {
 
-        player.play('./kick.wav', (err) => {
+        player.play('sounds/kick.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
 
@@ -113,7 +113,7 @@ stepSequencer_2.on('0', function (step) {
     })
     .on('5', function (step) {
 
-        player.play('./Boing.wav', (err) => {
+        player.play('sounds/Boing.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
 
