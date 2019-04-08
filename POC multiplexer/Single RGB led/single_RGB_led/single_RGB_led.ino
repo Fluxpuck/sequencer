@@ -50,16 +50,25 @@ void loop()
     Serial.print(i);
     Serial.print(" is ");
     if ( data == HIGH ) Serial.println("not pressed");
-    else Serial.println("pressed");
+    else Serial.print("pressed ");
     
-    if (i == 0 && data == LOW)  // red
+    if (i == 0 && data == LOW)
     {
       setColor(255, 0, 0);
-      Serial.print("red");
+      Serial.println("blue"); // blue
     }
-    if (i == 1 && data == LOW) setColor(0, 255, 0);  // green
-    if (i == 2 && data == LOW) setColor(0, 0, 255);  // blue
-    if (i == 3 && data == LOW) setColor(80, 0, 80);  // purple
+    if (i == 1 && data == LOW) {
+      setColor(0, 255, 0);  // green
+      Serial.println("green");
+    }
+    if (i == 2 && data == LOW)  {
+      setColor(0, 0, 255); // red
+      Serial.println("red");
+    }
+    if (i == 3 && data == LOW) {
+      setColor(80, 0, 80); // purple
+      Serial.println("purple");
+    }
     
   }
   Serial.println();
