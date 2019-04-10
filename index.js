@@ -17,11 +17,11 @@ var stepSequencer_3 = new StepSequencer(tempo, division, sequence_3);
 // the step when that step is to be played
 stepSequencer_0.on('0', function (step) {
 
-    player.play('sounds/kick.wav', (err) => {
+    player.play('./kick.wav', (err) => {
         if (err) console.log(`Could not play sound: ${err}`);
     });
 
-    console.log("KICK")
+    console.log("Kick")
     // console.log(step);
 })
     .on('1', function (step) {
@@ -35,11 +35,11 @@ stepSequencer_0.on('0', function (step) {
     })
     .on('4', function (step) {
 
-        player.play('sounds/kick.wav', (err) => {
+        player.play('./kick.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
 
-        console.log("KICK")
+        console.log("Kick")
         // console.log(step);
     })
     .on('5', function (step) {
@@ -66,13 +66,7 @@ stepSequencer_1.on('0', function (step) {
         console.log(step);
     })
     .on('3', function (step) {
-
-        // player.play('./Crash.wav', (err) => {
-        //     if (err) console.log(`Could not play sound: ${err}`);
-        // });
-
-        // console.log("Crash")
-        // console.log(step);
+        console.log(step);
     })
     .on('4', function (step) {
         console.log(step);
@@ -84,12 +78,7 @@ stepSequencer_1.on('0', function (step) {
         console.log(step);
     })
     .on('7', function (step) {
-        // player.play('./Crash.wav', (err) => {
-        //     if (err) console.log(`Could not play sound: ${err}`);
-        // });
-
-        // console.log("Crash")
-        // console.log(step);
+        console.log(step);
     });
 
 stepSequencer_1.play();
@@ -113,7 +102,7 @@ stepSequencer_2.on('0', function (step) {
     })
     .on('5', function (step) {
 
-        player.play('sounds/Boing.wav', (err) => {
+        player.play('./Boing.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
 
