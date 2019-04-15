@@ -1,5 +1,6 @@
 const player = require('play-sound')();
 var StepSequencer = require('step-sequencer');
+var keypress = require('keypress');
 
 // Instantiate a new StepSequencer object
 var tempo = 60;
@@ -20,140 +21,129 @@ stepSequencer_0.on('0', function (step) {
     player.play('sounds/kick.wav', (err) => {
         if (err) console.log(`Could not play sound: ${err}`);
     });
-
-    console.log("KICK")
-    // console.log(step);
 })
     .on('1', function (step) {
-        console.log(step);
+        player.play('sounds/kick.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });    
     })
     .on('2', function (step) {
-        console.log(step);
+        player.play('sounds/kick.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });    
     })
     .on('3', function (step) {
-        console.log(step);
+        player.play('sounds/kick.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });    
     })
     .on('4', function (step) {
-
         player.play('sounds/kick.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
-
-        console.log("KICK")
-        // console.log(step);
     })
     .on('5', function (step) {
-        console.log(step);
+        player.play('sounds/kick.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });    
     })
     .on('6', function (step) {
-        console.log(step);
+        player.play('sounds/kick.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });    
     })
     .on('7', function (step) {
-        console.log(step);
+        player.play('sounds/kick.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });    
     });
 
 stepSequencer_0.play();
 
-// The StepSequencer emits the number of
-// the step when that step is to be played
+
 stepSequencer_1.on('0', function (step) {
-    console.log(step);
+    player.play('sounds/Crash.wav', (err) => {
+        if (err) console.log(`Could not play sound: ${err}`);
+    });
 })
     .on('1', function (step) {
-        console.log(step);
+        player.play('sounds/Crash.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('2', function (step) {
-        console.log(step);
+        player.play('sounds/Crash.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('3', function (step) {
-
-        // player.play('./Crash.wav', (err) => {
-        //     if (err) console.log(`Could not play sound: ${err}`);
-        // });
-
-        // console.log("Crash")
-        // console.log(step);
+        player.play('sounds/Crash.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('4', function (step) {
-        console.log(step);
+        player.play('sounds/Crash.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('5', function (step) {
-        console.log(step);
+        player.play('sounds/Crash.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('6', function (step) {
-        console.log(step);
+        player.play('sounds/Crash.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('7', function (step) {
-        // player.play('./Crash.wav', (err) => {
-        //     if (err) console.log(`Could not play sound: ${err}`);
-        // });
-
-        // console.log("Crash")
-        // console.log(step);
-    });
+        player.play('sounds/Crash.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
+    })
 
 stepSequencer_1.play();
 
-// The StepSequencer emits the number of
-// the step when that step is to be played
-stepSequencer_2.on('0', function (step) {
-    console.log(step);
-})
-    .on('1', function (step) {
-        console.log(step);
-    })
-    .on('2', function (step) {
-        console.log(step);
-    })
-    .on('3', function (step) {
-        console.log(step);
-    })
-    .on('4', function (step) {
-        console.log(step);
-    })
-    .on('5', function (step) {
 
+stepSequencer_2.on('0', function (step) {
         player.play('sounds/Boing.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
-
-        console.log("Boing")
-        // console.log(step);
     })
-    .on('6', function (step) {
-        console.log(step);
-    })
-    .on('7', function (step) {
-        console.log(step);
-    });
-
-stepSequencer_2.play();
-
-// The StepSequencer emits the number of
-// the step when that step is to be played
-stepSequencer_3.on('0', function (step) {
-    console.log(step);
-})
     .on('1', function (step) {
-        console.log(step);
+        player.play('sounds/Boing.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('2', function (step) {
-        console.log(step);
+        player.play('sounds/Boing.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('3', function (step) {
-        console.log(step);
+        player.play('sounds/Boing.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('4', function (step) {
-        console.log(step);
+        player.play('sounds/Boing.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('5', function (step) {
-        console.log(step);
+        player.play('sounds/Boing.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('6', function (step) {
-        console.log(step);
+        player.play('sounds/Boing.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
     })
     .on('7', function (step) {
-        console.log(step);
-    });
+        player.play('sounds/Boing.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
+    })
+stepSequencer_2.play();
 
-stepSequencer_3.play();
