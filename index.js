@@ -16,12 +16,11 @@ var stepSequencer_3 = new StepSequencer(tempo, division, sequence_3);
 
 // The StepSequencer emits the number of
 // the step when that step is to be played
-stepSequencer_0.on('0', function (step) {
-
-    player.play('sounds/kick.wav', (err) => {
-        if (err) console.log(`Could not play sound: ${err}`);
-    });
-})
+    stepSequencer_0.on('0', function (step) {
+        player.play('sounds/kick.wav', (err) => {
+            if (err) console.log(`Could not play sound: ${err}`);
+        });
+    })
     .on('1', function (step) {
         player.play('sounds/kick.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
