@@ -1,14 +1,21 @@
 const player = require('play-sound')();
 var StepSequencer = require('step-sequencer');
-
+const fs = require('fs');
 const SerialPort = require('serialport');
 const serialport = new SerialPort('/dev/cu.usbmodem14201', { baudRate: 2000000 });
+
+arrr = new Uint8Array()
+arr = new Uint8Array()
 
 serialport.on('open', function () {
     console.log('Serial Port is Open');
     serialport.on('data', function (data) {
 
-        console.log(data)
+        arr = new Uint8Array(data)
+        // console.log(arr);
+
+        //read data array
+        arrr = JSON.parse(fs.readFileSync("./data.json", "utf8"))
 
     });
 
