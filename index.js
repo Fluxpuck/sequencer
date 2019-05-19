@@ -1,148 +1,108 @@
 const player = require('play-sound')();
 var StepSequencer = require('step-sequencer');
-var keypress = require('keypress');
+
+const SerialPort = require('serialport');
+const serialport = new SerialPort('/dev/cu.usbmodem14201', { baudRate: 2000000 });
+
+serialport.on('open', function () {
+    console.log('Serial Port is Open');
+    serialport.on('data', function (data) {
+
+        console.log(data)
+
+    });
+
+});
 
 // Instantiate a new StepSequencer object
 var tempo = 60;
 var division = 8;
 var sequence_0 = [0, 1, 2, 3, 4, 5, 6, 7];
-var sequence_1 = [0, 1, 2, 3, 4, 5, 6, 7];
-var sequence_2 = [0, 1, 2, 3, 4, 5, 6, 7];
-var sequence_3 = [0, 1, 2, 3, 4, 5, 6, 7];
 var stepSequencer_0 = new StepSequencer(tempo, division, sequence_0);
-var stepSequencer_1 = new StepSequencer(tempo, division, sequence_1);
-var stepSequencer_2 = new StepSequencer(tempo, division, sequence_2);
-var stepSequencer_3 = new StepSequencer(tempo, division, sequence_3);
 
 // The StepSequencer emits the number of
 // the step when that step is to be played
-    stepSequencer_0.on('0', function (step) {
-        player.play('sounds/kick.wav', (err) => {
+stepSequencer_0.on('0', function (step) {
+
+    if (arrr[0] == 48) {
+        player.play('./kick.wav', (err) => {
             if (err) console.log(`Could not play sound: ${err}`);
         });
-    })
+    }
+    // else {
+    //     console.log(step);
+    // }
+
+})
     .on('1', function (step) {
-        player.play('sounds/kick.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });    
+        if (arrr[1] == 48) {
+            player.play('./kick.wav', (err) => {
+                if (err) console.log(`Could not play sound: ${err}`);
+            });
+        }
+        // else {
+        //     console.log(step);
+        // }
     })
     .on('2', function (step) {
-        player.play('sounds/kick.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });    
+        if (arrr[2] == 48) {
+            player.play('./kick.wav', (err) => {
+                if (err) console.log(`Could not play sound: ${err}`);
+            });
+        }
+        // else {
+        //     console.log(step);
+        // }
     })
     .on('3', function (step) {
-        player.play('sounds/kick.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });    
+        if (arrr[3] == 48) {
+            player.play('./kick.wav', (err) => {
+                if (err) console.log(`Could not play sound: ${err}`);
+            });
+        }
+        // else {
+        //     console.log(step);
+        // }
     })
     .on('4', function (step) {
-        player.play('sounds/kick.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
+        if (arrr[4] == 48) {
+            player.play('./kick.wav', (err) => {
+                if (err) console.log(`Could not play sound: ${err}`);
+            });
+        }
+        // else {
+        //     console.log(step);
+        // }
     })
     .on('5', function (step) {
-        player.play('sounds/kick.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });    
+        if (arrr[5] == 48) {
+            player.play('./kick.wav', (err) => {
+                if (err) console.log(`Could not play sound: ${err}`);
+            });
+        }
+        // else {
+        //     console.log(step);
+        // }
     })
     .on('6', function (step) {
-        player.play('sounds/kick.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });    
+        if (arrr[6] == 48) {
+            player.play('./kick.wav', (err) => {
+                if (err) console.log(`Could not play sound: ${err}`);
+            });
+        }
+        // else {
+        //     console.log(step);
+        // }
     })
     .on('7', function (step) {
-        player.play('sounds/kick.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });    
+        if (arrr[7] == 48) {
+            player.play('./kick.wav', (err) => {
+                if (err) console.log(`Could not play sound: ${err}`);
+            });
+        }
+        // else {
+        //     console.log(step);
+        // }
     });
 
 stepSequencer_0.play();
-
-
-stepSequencer_1.on('0', function (step) {
-    player.play('sounds/Crash.wav', (err) => {
-        if (err) console.log(`Could not play sound: ${err}`);
-    });
-})
-    .on('1', function (step) {
-        player.play('sounds/Crash.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('2', function (step) {
-        player.play('sounds/Crash.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('3', function (step) {
-        player.play('sounds/Crash.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('4', function (step) {
-        player.play('sounds/Crash.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('5', function (step) {
-        player.play('sounds/Crash.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('6', function (step) {
-        player.play('sounds/Crash.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('7', function (step) {
-        player.play('sounds/Crash.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-
-stepSequencer_1.play();
-
-
-stepSequencer_2.on('0', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('1', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('2', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('3', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('4', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('5', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('6', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-    .on('7', function (step) {
-        player.play('sounds/Boing.wav', (err) => {
-            if (err) console.log(`Could not play sound: ${err}`);
-        });
-    })
-stepSequencer_2.play();
-
