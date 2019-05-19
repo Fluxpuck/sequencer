@@ -14,6 +14,26 @@ serialport.on('open', function () {
         arr = new Uint8Array(data)
         // console.log(arr);
 
+        //write data
+        let json = JSON.stringify(arr);
+        fs.writeFileSync('data.json', json);
+
+        //=====FAIL SAFE=====\\
+        if (arr.length == 8) {
+
+            //write last correct data array to safe
+            let sjson = JSON.stringify(arr);
+            fs.writeFileSync('safe.json', sjson);
+
+        } else if (arr.length != 8) {
+
+            //read last correct array
+            let safe = JSON.parse(fs.readFileSync("./safe.json", "utf8"));
+
+            let sjson = JSON.stringify(safe);
+            fs.writeFileSync('data.json', sjson);
+        }
+
         //read data array
         arrr = JSON.parse(fs.readFileSync("./data.json", "utf8"))
 
